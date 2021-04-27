@@ -1,0 +1,299 @@
+class Product
+    {
+        public string ProductName { get; set; }
+        public int Quantity { get; set; }
+        public int Prize { get; set; }
+
+        public Product()
+        {
+
+        }
+        public void InputDetails()
+        {
+            Console.WriteLine("Enter the Product Name : ");
+            ProductName = Console.ReadLine();
+            Console.WriteLine("Enter the Quantity of the Product : ");
+            Quantity = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Prize of the Product : ");
+            Prize = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public void DisplayDetails()
+        {
+            Console.WriteLine("Product Name : " + ProductName);
+            Console.WriteLine("Product Quantity : " + Quantity);
+            Console.WriteLine("Product Prize : " + Prize);
+        }
+
+        static void Main()
+        {
+            Product pro1 = new Product();
+            pro1.InputDetails();
+            Product pro2 = new Product();
+            pro2.InputDetails();
+            pro1.DisplayDetails();
+            pro2.DisplayDetails();
+        }
+    }
+
+using system.IO;
+using system;
+
+class product
+    {
+        public string ProductName;
+        public int Quantity;
+        public int  Prize;
+        public double total;
+        
+        
+        public static void Main()
+        {
+           product perfum = new product();
+           perfum.total=perfum.Prize*perfum.Quantity;
+           perfum.ProductName="AXE";
+           perfum.Prize=249;
+           Console.WriteLine("Enter the Quantity");
+           perfum.total=(perfum.Prize)*(perfum*Quantity);
+           
+           Console.Write("1 ");
+           Console.Write(perfum.ProductName+"    ");
+           Console.Write(perfum.Prize+"\t ");
+           Console.Write(perfum.Quantity+"     ");
+           Console.Write(perfum.total  );
+        }
+    }
+
+using System;
+
+public class Product
+        {
+        public string productName;
+        public double price;
+        public int quantity;
+        public double  total;
+        
+
+
+ public static void Main()
+    {
+        Product perfum = new Product();
+        perfum.total=perfum.price*perfum.quantity;
+   	
+	 	Console.WriteLine("enter the product name");
+        perfum.productName =Console.ReadLine();
+        Console.WriteLine("enter the quantity");
+        perfum.quantity =Convert.ToInt32(Console.ReadLine());
+        perfum.total=(perfum.price* perfum.quantity);
+	  	Console.WriteLine("enter the price");
+        perfum.price = Convert.ToDouble(Console.ReadLine());
+        
+	   Console.WriteLine("S.No \tProduct_Name \t Price \t Quantity \t Total");
+		 Console.WriteLine("enter the price");
+         Console.Write("1  ");
+         Console.Write(perfum.productName+"       ");
+         Console.Write(perfum.price + "\t ");
+         Console.Write(perfum.quantity+"     "  );
+         Console.Write(perfum.total+"   ");
+        
+    }   
+        
+    }
+using System;
+
+namespace Sample5
+{
+   public class Program
+    {
+        class Inventory
+        {
+            public int code1 = 1;
+            public int code2 = 2;
+            public string product1 = "mangoes";
+            public string product2 = "apples";
+            public int product1Quan = 200;
+            public int product2Quan = 200;
+        }
+
+        class Customer : Inventory
+        {
+            public void Buyer()
+            {
+                Console.WriteLine("Enter the product code");
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n == 1)
+                {
+                    Console.WriteLine("The selected Product is \t" + product1);
+                    Console.WriteLine("Enter the Quantity");
+                    int quan = Convert.ToInt32(Console.ReadLine());
+                    if (quan <= product1Quan)
+                    {
+                        product1Quan -= quan;
+                        Console.WriteLine("The no of pieces left is\t " + product1Quan);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Quantity Not Available.");
+                    }
+
+                }
+                else if (n == 2)
+                {
+                    Console.WriteLine("The selected Product is \t" + product2);
+                    Console.WriteLine("Enter the Quantity");
+                    int quan = Convert.ToInt32(Console.ReadLine());
+                    if (quan <= product2Quan)
+                    {
+                        product2Quan -= quan;
+                        Console.WriteLine("The no of pieces left is\t " + product2Quan);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Quantity Not Available.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Product Not Available");
+                }
+
+            }
+            public void Wholeseller()
+            {
+                Console.WriteLine("Enter the product code");
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n == 1)
+                {
+                    Console.WriteLine("The selected Product is \t" + product1);
+                    Console.WriteLine("Enter the Quantity");
+                    int quan = Convert.ToInt32(Console.ReadLine());
+                    product1Quan += quan;
+                    Console.WriteLine("The no of pieces left is\t "+product1Quan);
+
+
+                }
+                else if (n == 2)
+                {
+                    Console.WriteLine("The selected Product is \t" + product2);
+                    Console.WriteLine("Enter the Quantity");
+                    int quan = Convert.ToInt32(Console.ReadLine());
+                    product2Quan += quan;
+                    Console.WriteLine("The no of pieces left is\t " + product2Quan);
+
+                }
+                else
+                {
+                    Console.WriteLine("Product Not Available");
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter whether u are a Buyer Or Wholeseller");
+            String c = Console.ReadLine();
+            if(c.Equals("Buyer"))
+            {
+                Customer buyer = new Customer();
+                buyer.Buyer();
+            }
+            else if (c.Equals("Wholeseller"))
+            {
+                Customer wholeseller = new Customer();
+                wholeseller.Wholeseller();
+            }
+            else
+            {
+                Console.Write("Invalid Entry");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+*************************************
+using System.IO;
+using System;
+
+    class calculator
+    {
+        public int a;
+        public int b;
+
+        public void InputX()
+        {
+            Console.WriteLine("Enter a number, a=");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter another number, b=");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Sum = " + (a+b));
+
+        }
+        public static void Main()
+        {
+            calculator obj = new calculator();
+            //int exitkey = 1;
+           for(; ; )
+            {
+                Console.WriteLine("You want to exit ? Y/N");
+                string choice = Console.ReadLine();
+                if (choice.ToLower() == "n")
+                {
+                    obj.InputX();
+                    choice = Console.ReadLine();
+                }
+                else
+                {
+                    break;
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+
+
+********************************************************************
+using System;
+class X 
+{
+    protected int x;
+    public X()
+    {
+        x = 10;
+    }
+    class Y:X
+    {
+        public int getX()
+        {
+            return x;
+        }
+    }
+    class program
+    {
+  public static void Main()
+  {
+    X obj1 = new x();
+    Y obj2 = new Y();
+    Console.WriteLine("value of x : "+obj2.getx());
+  }
+}
+***********************************************
+using System.IO;
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int x = 1;
+        int y;
+        try
+        {
+            y = x/0;
+            Console.WriteLine(y);
+        }
+        catch(Exception ex)
+        {
+        Console.WriteLine("some error have occured");
+        }
+    }
+}
